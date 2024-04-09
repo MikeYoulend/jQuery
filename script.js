@@ -23,6 +23,14 @@ $("h1").click(function(){
 $("button").click(function(){
     $("h1").css("color", "purple")
     //.hide
+    //.show
+    //oppure toggle per attivare e disattivare/appare-scompare
+    //.fadeOut
+    //.fadeIn
+    //.fadeToggle
+    //.slideUp
+    //.slideDown
+    //.slideToggle
 });
 
 //Input keypress
@@ -49,3 +57,12 @@ $("h1").append("<button>Dopo</button>")
 
 //remove
 //$("button").remove();
+
+//Animation
+$("button").on("click", function() {
+    $("button").animate({margin: 20})
+})
+
+$("button").on("click", function() {
+    $("h1").slideUp().slideDown().animate({opacity: 0.5})
+})
